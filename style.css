@@ -67,11 +67,12 @@ a {
 .nav-menu {
   display: flex;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
 .nav-menu a {
   display: inline-block;
-  padding: 6px 2px;
+  padding: 6px 4px;
   color: #4b5563;
   transition: color 0.25s ease;
 }
@@ -84,7 +85,7 @@ a {
 .hero {
   text-align: center;
   padding: 88px 20px 96px;
-  background: linear-gradient(160deg, #eef2ff 0%, #f7f8fa 70%);
+  background: linear-gradient(160deg, #8192e7 0%, #b3c0f5 70%);
 }
 
 .hero h1 {
@@ -191,6 +192,61 @@ a {
   color: #6b7280;
 }
 
+body.greeting-page {
+  background-color: #f0f4f8;
+  font-family: "Microsoft YaHei", sans-serif; 
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  height: 100vh;             
+  margin: 0;                 
+}
+
+.greeting-container {
+  background-color: transparent; 
+  padding: 20px; 
+  box-shadow: none;  
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; 
+  max-width: 500px; 
+}
+
+#greeting {
+  color: #2c3e50;
+  font-size: 32px;
+  margin: 0 0 16px 0;       
+}
+
+#tip {
+  color: #606f7b;
+  font-size: 18px;
+  margin: 0 0 30px 0; 
+  padding: 10px 20px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.jump-btn {
+  display: inline-block;
+  background-color: #3b82f6; 
+  color: #ffffff;
+  text-decoration: none;    
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 30px;       
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.jump-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
 @media (min-width: 640px) {
   .works-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -238,7 +294,7 @@ a {
 
 .form-item label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
   font-size: 0.925rem;
   color: #374151;
 }

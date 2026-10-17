@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>专属问候</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="greeting-page">
+  
+  <div class="greeting-container">
+    <h1 id="greeting">加载中…</h1>
+    <p id="tip"></p>
+    
+    <a href="index.html" class="jump-btn">📸 看看我的摄影作品</a>
+  </div>
+
+  <script>
+    const hour = new Date().getHours();  
+    const myName = "牛牛";
+    const weekday = new Date().getDay();
+
+    let greetingText = "";   
+    let wearTip = "";        
+
+    if (hour < 12) {                     
+      greetingText = `早上好，${myName}！今天是${['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][weekday]}`;
+      wearTip = "早晨微凉，记得带件薄外套";
+    } else if (hour < 18) {
+      greetingText = `下午好，${myName}！今天是${['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][weekday]}`;
+      wearTip = "阳光不错，穿亮色系心情更好";
+    } else {
+      greetingText = `晚上好，${myName}！今天是${['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][weekday]}`;
+      wearTip = "夜间降温，明天备好长袖";
+    }
+
+    document.getElementById("greeting").textContent = greetingText;
+    document.getElementById("tip").textContent = wearTip;
+  </script>
+  
+</body>
+</html>
